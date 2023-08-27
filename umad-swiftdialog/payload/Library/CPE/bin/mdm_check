@@ -21,7 +21,7 @@ DIALOG="/usr/local/bin/dialog"
 DIALOG_COMMAND_FILE=$(/usr/bin/mktemp /var/tmp/mdmcheck_dialog.XXX)
 DIALOG_LINK="https://github.com/bartreardon/swiftDialog/releases/download/v2.1.0/dialog-2.1.0-4148.pkg"
 HELP_LINK="https://confluence.company.com/x/dhoKBQ"
-MDM_SERVER="simplemdm"
+MDM_SERVER="jss.zillowgroup.com"
 DEFAULT_OPTIONS=(
     --moveable
     --ontop
