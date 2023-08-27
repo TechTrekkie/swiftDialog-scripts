@@ -3,7 +3,7 @@
 <plist version="1.0">
 	<dict>
 		<key>Label</key>
-		<string>com.company.mdm_check</string>
+		<string>com.zillow.mdm_check</string>
 		<key>Program</key>
 		<string>/Library/CPE/bin/mdm_check</string>
 		<key>RunAtLoad</key>
