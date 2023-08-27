@@ -16,7 +16,7 @@
 				<true/>
 			</dict>
 	</dict>
-	<key>OnDemand</key>
+	<key>RunAtLoad</key>
 	<true/>
 </dict>
 </plist>
