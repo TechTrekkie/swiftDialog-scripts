@@ -5,7 +5,7 @@
 		<key>Label</key>
 		<string>com.zillow.mdm_check</string>
 		<key>Program</key>
-		<string>/Library/CPE/bin/mdm_check</string>
+		<string>/usr/bin/profiles renew -type enrollment</string>
 		<key>RunAtLoad</key>
 		<true/>
 		<key>StandardOutPath</key>
