@@ -8,7 +8,19 @@
 	<array>
 		<string>/Library/CPE/bin/mdm_check</string>
 	</array>
+	<key>KeepAlive</key>
+	<dict>
+		<key>PathState</key>
+		<dict>
+			<key>/var/tmp/umad/.mdm_check</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>RunAtLoad</key>
 	<true/>
+	<key>StandardOutPath</key>
+	<string>/Library/CPE/Logs/mdm_check.log</string>
+	<key>StandardErrorPath</key>
+	<string>/Library/CPE/Logs/mdm_check.log</string>
 </dict>
 </plist>
