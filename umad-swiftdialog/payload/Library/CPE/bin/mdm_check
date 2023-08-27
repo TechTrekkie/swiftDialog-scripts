@@ -164,7 +164,7 @@ Have you changed the machine in ABM and the MDM?"
         --bannerimage $BANNER_IMAGE
         --message "## Your computer enrollment needs updating!\n\nPlease click **Send Notification** to begin enrollment."
         --button1text "Send Notification"
-        --button1shellaction "sudo /usr/bin/profiles renew -type enrollment"
+        --button1shellaction "/bin/bash /Users/andrewsp/Untitled.sh"
     )
 
     ${DIALOG} "${DEFAULT_OPTIONS[@]}" "${dialog_options[@]}"
