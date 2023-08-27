@@ -17,7 +17,8 @@
 ########### Variables ######################
 ############################################
 BANNER_IMAGE="/Library/CPE/imgs/warningIcon.png"
-DIALOG="/usr/local/bin/dialog"
+#DIALOG="/usr/local/bin/dialog"
+DIALOG="/Library/Application Support/Dialog/Dialog.app/Contents/MacOS/Dialog"
 DIALOG_COMMAND_FILE=$(/usr/bin/mktemp /var/tmp/mdmcheck_dialog.XXX)
 chmod -v 666 "${DIALOG_COMMAND_FILE}"
 DIALOG_LINK=$(curl -L --silent --fail "https://api.github.com/repos/swiftDialog/swiftDialog/releases/latest" | awk -F '"' "/browser_download_url/ && /pkg\"/ { print \$4; exit }")
