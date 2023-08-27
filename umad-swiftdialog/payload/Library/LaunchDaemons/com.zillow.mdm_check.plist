@@ -5,7 +5,7 @@
 	<key>Label</key>
 	<string>com.zillow.mdm_check</string>
 	<key>Program</key>
-	<string>zsh /Library/CPE/bin/mdm_check</string>
+	<string>/bin/zsh /Library/CPE/bin/mdm_check</string>
 	<key>RunAtLoad</key>
 	<true/>
 	<key>StandardOutPath</key>
