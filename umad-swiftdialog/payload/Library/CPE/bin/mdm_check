@@ -161,7 +161,7 @@ Have you changed the machine in ABM and the MDM?"
     write_log "Machine is in DEP and is not enrolled in ${MDM_SERVER}. Displaying notification."
 
     dialog_options=(
-        --bannerimage $BANNER_IMAGE
+        --icon $BANNER_IMAGE
         --message "## Your computer enrollment needs updating!\n\nPlease click **Send Notification** to begin enrollment."
         --button1text "Send Notification"
     )
@@ -173,8 +173,8 @@ Have you changed the machine in ABM and the MDM?"
     fi
     
     #/usr/bin/profiles -N
-    outdatedOsAction="jamfselfservice://content?entity=policy&id=731&action=view"
-
+    #outdatedOsAction="jamfselfservice://content?entity=policy&id=731&action=view"
+    outdatedOsAction="/Library/CPE/bin/mdm_check"
     loggedInUser=$( echo "show State:/Users/ConsoleUser" | scutil | awk '/Name :/ { print $3 }' )
     loggedInUserID=$( id -u "${loggedInUser}" )
 
