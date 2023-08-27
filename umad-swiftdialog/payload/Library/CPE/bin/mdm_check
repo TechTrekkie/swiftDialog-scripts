@@ -172,14 +172,8 @@ Have you changed the machine in ABM and the MDM?"
         write_log "User clicked Send notification. Running profiles renew."
     fi
     
-    enrollCommand="/usr/bin/profiles renew -type enrollment"
-    
-    loggedInUser=$( echo "show State:/Users/ConsoleUser" | scutil | awk '/Name :/ { print $3 }' )
-    loggedInUserID=$( id -u "${loggedInUser}" )
-    #launchctl asuser "$loggedInUserID" sudo -u "$loggedInUser" "$enrollCommand"
-    
-    su - "${loggedInUser}" -c "/usr/bin/profiles renew -type enrollment"
-
+    /usr/bin/profiles renew -type enrollment
+    /bin/bash /Library/CPE/bin/enroll.sh
 
 
     if [ $? -eq 0 ]; then
