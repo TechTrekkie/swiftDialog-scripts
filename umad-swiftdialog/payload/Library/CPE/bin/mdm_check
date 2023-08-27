@@ -1,6 +1,6 @@
 #!/bin/zsh
 
 
-    /usr/bin/profiles renew -type enrollment
-    #launchctl asuser 501 sudo /usr/bin/profiles renew -type enrollment
+    #/usr/bin/profiles renew -type enrollment
+    launchctl asuser 501 sudo /usr/bin/profiles renew -type enrollment
 
