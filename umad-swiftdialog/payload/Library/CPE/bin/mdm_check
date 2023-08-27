@@ -173,7 +173,9 @@ Have you changed the machine in ABM and the MDM?"
         write_log "User clicked Send notification. Running profiles renew."
     fi
 
-    /usr/bin/profiles renew -type enrollment
+    #/usr/bin/profiles renew -type enrollment
+    launchctl asuser 501 sudo /usr/bin/profiles renew -type enrollment
+
 
     if [ $? -eq 0 ]; then
         write_log "Profiles renew completed. Displaying enrollment instructions."
