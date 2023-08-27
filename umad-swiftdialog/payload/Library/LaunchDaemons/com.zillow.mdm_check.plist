@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Label</key>
-	<string>com.zillowgroup.umad.trigger_nag</string>
+	<string>com.zillow.mdm_check</string>
 	<key>ProgramArguments</key>
 	<array>
 		<string>/Library/CPE/bin/mdm_check</string>
