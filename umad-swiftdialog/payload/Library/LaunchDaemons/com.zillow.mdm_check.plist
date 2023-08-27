@@ -1,23 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>Label</key>
-	<string>com.zillow.mdm_check</string>
-	<key>UserName</key>
-	<string>root</string>
-	<key>ProgramArguments</key>
-	<array>
-		<string>zsh</string>
+	<dict>
+		<key>Label</key>
+		<string>com.zillow.mdm_check</string>
+		<key>Program</key>
 		<string>/Library/CPE/bin/mdm_check</string>
-	</array>
-	<key>RunAtLoad</key>
-	<true/>
-	<key>StandardOutPath</key>
-	<string>/Library/CPE/Logs/mdm_check.log</string>
-	<key>StandardErrorPath</key>
-	<string>/Library/CPE/Logs/mdm_check.log</string>
-	<key>StartInterval</key>
-	<integer>60</integer>
-</dict>
+		<key>RunAtLoad</key>
+		<true/>
+		<key>StandardOutPath</key>
+		<string>/Library/CPE/Logs/mdm_check.log</string>
+		<key>StandardErrorPath</key>
+		<string>/Library/CPE/Logs/mdm_check.log</string>
+		<key>StartInterval</key>
+		<integer>3600</integer>
+	</dict>
 </plist>
