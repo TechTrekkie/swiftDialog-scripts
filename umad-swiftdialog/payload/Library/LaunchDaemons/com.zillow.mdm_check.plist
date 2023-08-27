@@ -4,6 +4,8 @@
 <dict>
 	<key>Label</key>
 	<string>com.zillow.mdm_check</string>
+	<key>UserName</key>
+	<string>root</string>
 	<key>ProgramArguments</key>
 	<array>
 		<string>/Library/CPE/bin/mdm_check</string>
