@@ -17,8 +17,8 @@
 ########### Variables ######################
 ############################################
 BANNER_IMAGE="/Library/CPE/imgs/warningIcon.png"
-#DIALOG="/usr/local/bin/dialog"
-DIALOG="/Library/Application Support/Dialog/Dialog.app/Contents/MacOS/Dialog"
+DIALOG="/usr/local/bin/dialog"
+#DIALOG="/Library/Application Support/Dialog/Dialog.app/Contents/MacOS/Dialog"
 DIALOG_COMMAND_FILE=$(/usr/bin/mktemp /var/tmp/mdmcheck_dialog.XXX)
 chmod -v 666 "${DIALOG_COMMAND_FILE}"
 DIALOG_LINK=$(curl -L --silent --fail "https://api.github.com/repos/swiftDialog/swiftDialog/releases/latest" | awk -F '"' "/browser_download_url/ && /pkg\"/ { print \$4; exit }")
@@ -172,9 +172,14 @@ Have you changed the machine in ABM and the MDM?"
     if [ $? -eq 0 ]; then
         write_log "User clicked Send notification. Running profiles renew."
     fi
-
-    /usr/bin/profiles renew -type enrollment
+    
+    loggedInUser=$( echo "show State:/Users/ConsoleUser" | scutil | awk '/Name :/ { print $3 }' )
+    loggedInUserID=$( id -u "${loggedInUser}" )
+    
+    #/usr/bin/profiles renew -type enrollment
     #launchctl asuser 501 sudo /usr/bin/profiles renew -type enrollment
+    su - "${loggedInUser}" -c /usr/bin/profiles renew -type enrollment
+
 
 
     if [ $? -eq 0 ]; then
