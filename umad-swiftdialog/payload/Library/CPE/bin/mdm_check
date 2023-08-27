@@ -172,7 +172,8 @@ Have you changed the machine in ABM and the MDM?"
         write_log "User clicked Send notification. Running profiles renew."
     fi
     
-    /usr/bin/profiles -N
+    #/usr/bin/profiles -N
+    /usr/bin/open "jamfselfservice://content?entity=policy&id=731&action=view"
 
 
     if [ $? -eq 0 ]; then
