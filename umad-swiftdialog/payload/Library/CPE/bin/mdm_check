@@ -173,7 +173,15 @@ Have you changed the machine in ABM and the MDM?"
     fi
     
     #/usr/bin/profiles -N
-    /usr/bin/open "jamfselfservice://content?entity=policy&id=731&action=view"
+    outdatedOsAction="jamfselfservice://content?entity=policy&id=731&action=view"
+
+    loggedInUser=$( echo "show State:/Users/ConsoleUser" | scutil | awk '/Name :/ { print $3 }' )
+    loggedInUserID=$( id -u "${loggedInUser}" )
+
+    
+    su - "${loggedInUser}" -c "/usr/bin/open \"${outdatedOsAction}\""
+
+
 
 
     if [ $? -eq 0 ]; then
