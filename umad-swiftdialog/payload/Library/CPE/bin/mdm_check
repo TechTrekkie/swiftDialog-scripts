@@ -178,7 +178,7 @@ Have you changed the machine in ABM and the MDM?"
     
     #/usr/bin/profiles renew -type enrollment
     #launchctl asuser 501 sudo /usr/bin/profiles renew -type enrollment
-    su - "${loggedInUser}" -c /usr/bin/profiles renew -type enrollment
+    su - "${loggedInUser}" -c "/usr/bin/profiles renew -type enrollment"
 
 
 
