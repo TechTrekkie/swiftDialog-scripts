@@ -4,8 +4,10 @@
 <dict>
 	<key>Label</key>
 	<string>com.zillow.mdm_check</string>
-	<key>Program</key>
-	<string>sudo /bin/zsh /Library/CPE/bin/mdm_check</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Library/CPE/bin/mdm_check</string>
+	</array>
 	<key>RunAtLoad</key>
 	<true/>
 	<key>StandardOutPath</key>
