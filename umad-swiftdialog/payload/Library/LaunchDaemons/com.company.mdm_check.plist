@@ -13,6 +13,6 @@
 	<key>StandardErrorPath</key>
 	<string>/Library/CPE/Logs/mdm_check.log</string>
 	<key>StartInterval</key>
-	<integer>3600</integer>
+	<integer>60</integer>
 </dict>
 </plist>
