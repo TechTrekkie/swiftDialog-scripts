@@ -176,9 +176,10 @@ Have you changed the machine in ABM and the MDM?"
     loggedInUser=$( echo "show State:/Users/ConsoleUser" | scutil | awk '/Name :/ { print $3 }' )
     loggedInUserID=$( id -u "${loggedInUser}" )
     
-    #/usr/bin/profiles renew -type enrollment
+    renewAction="/usr/bin/profiles renew -type enrollment"
     #launchctl asuser 501 sudo /usr/bin/profiles renew -type enrollment
-    su - "${loggedInUser}" -c "/usr/bin/profiles renew -type enrollment"
+    #su - "${loggedInUser}" -c "/usr/bin/open \"${renewAction}\""
+    launchctl asuser "$loggedInUserID" sudo -u "$loggedInUser" "${renewAction}"
 
 
 
