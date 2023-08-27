@@ -16,10 +16,11 @@
 
 ########### Variables ######################
 ############################################
-BANNER_IMAGE="/Library/CPE/imgs/company-banner.png"
+BANNER_IMAGE="/Library/CPE/imgs/warningIcon.png"
 DIALOG="/usr/local/bin/dialog"
 DIALOG_COMMAND_FILE=$(/usr/bin/mktemp /var/tmp/mdmcheck_dialog.XXX)
-DIALOG_LINK="https://github.com/bartreardon/swiftDialog/releases/download/v2.1.0/dialog-2.1.0-4148.pkg"
+chmod -v 666 "${DIALOG_COMMAND_FILE}"
+DIALOG_LINK=$(curl -L --silent --fail "https://api.github.com/repos/swiftDialog/swiftDialog/releases/latest" | awk -F '"' "/browser_download_url/ && /pkg\"/ { print \$4; exit }")
 HELP_LINK="https://confluence.company.com/x/dhoKBQ"
 MDM_SERVER="jss.zillowgroup.com"
 DEFAULT_OPTIONS=(
@@ -182,7 +183,7 @@ Have you changed the machine in ABM and the MDM?"
 
     dialog_options=(
         --iconsize 500
-        --icon /Library/CPE/imgs/dep_enroll.png
+        --icon "/Library/CPE/imgs/dep_enroll.png"
         --centericon
         --message "## Notification has been sent\n\n
 It is located in the Notification Center in the top right corner of your screen.\n\n
