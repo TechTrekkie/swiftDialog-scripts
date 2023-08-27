@@ -8,6 +8,7 @@
 	<string>root</string>
 	<key>ProgramArguments</key>
 	<array>
+		<string>zsh</string>
 		<string>/Library/CPE/bin/mdm_check</string>
 	</array>
 	<key>RunAtLoad</key>
