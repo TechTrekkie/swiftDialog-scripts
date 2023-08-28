@@ -180,8 +180,6 @@ Have you changed the machine in ABM and the MDM?"
 
     
     #su - "${loggedInUser}" -c "/usr/bin/open \"${outdatedOsAction}\""
-    
-    #su - root -c "/usr/bin/open \"${outdatedOsAction}\""
 
 
 
